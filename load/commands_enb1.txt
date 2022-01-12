@@ -1,0 +1,6 @@
+table_set_default ipv4_lpm drop
+table_add MyIngress.ipv4_lpm to_port 192.168.254.240/32 => 4
+table_add MyIngress.ipv4_lpm to_port 192.168.254.0/24 => 1
+table_add MyIngress.ipv4_lpm to_port 192.168.0.1/32 => 2
+table_add MyIngress.ipv4_lpm to_port 192.168.254.200/32 => 3
+table_add MyIngress.ipv4_lpm to_port 192.168.254.100/32 => 3
