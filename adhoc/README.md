@@ -60,10 +60,3 @@ You may need to add the content below into `/etc/NetworkManager/NetworkManager.c
 [device]
 wifi.scan-rand-mac-address=no
 ```
-
-## Contribution to the Linux Kernel
-The IEEE 802.11p standard was enabled in the Linux kernel thanks to the following patches:
-
-1. mac80211_hwsim: add support for OCB: https://github.com/torvalds/linux/commit/7dfd8ac327301f302b03072066c66eb32578e940#diff-21081ef83e1374560c2e244926168e49
-2. mac80211_hwsim: add more 5GHz channels, 5/10 MHz support: https://github.com/torvalds/linux/commit/b5764696ac409523414f70421c13b7e7a9309454#diff-21081ef83e1374560c2e244926168e49
-3. mac80211_hwsim: report the WIPHY_FLAG_SUPPORTS_5_10_MHZ capability: https://github.com/torvalds/linux/commit/119aadf816f5373dc82ca4109d6d5b777e00475b#diff-21081ef83e1374560c2e244926168e49
