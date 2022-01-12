@@ -1,0 +1,8 @@
+*.py[co]
+*~
+*.egg-info/
+build/
+dist/
+*.log
+*.eps
+*.pid
