@@ -2,28 +2,21 @@
 
 ## Requirements 
 - **Kernel version**: + v5.8-rc1 (IEEE 802.11p support)
-- **wireless-regdb and CRDA**: See https://mininet-wifi.github.io/80211p/ for 802.11p support
-- **mininet-wifi**: emulation platform  
-- **p4**: for P4-enabled APs  
-- **sumo and sumo-tools (tested with 1.6)**: vehicular simulation
-- **python-scapy**: packet sniffer
-- **mosquitto, mosquitto-client and paho-mqtt**: MQTT communication
-- **python-pandas**: graph generation 
-- **bridge-utils**: create the virtual interface used by the socket communication
-  
-### Installing Mininet-WiFi  
-```
-~$ git clone https://github.com/intrig-unicamp/mininet-wifi   
-~$ cd mininet-wifi    
-~/mininet-wifi$ sudo util/install.sh -WlnfvBP  
-~/mininet-wifi$ cp ../d2-its-mininet-wifi/adhoc/new-york.net.xml mn_wifi/sumo/data/
-~/mininet-wifi$ cp ../d2-its-mininet-wifi/adhoc/new-york.rou.xml mn_wifi/sumo/data/
-~/mininet-wifi$ sudo make install
-```
+- **[wireless-regdb and CRDA](https://mininet-wifi.github.io/80211p/)**: In general, if you can establish communication between sta1 and sta2 by running https://github.com/intrig-unicamp/mininet-wifi/blob/master/examples/ieee80211p.py this means that IEEE 802.11p is working.
+- **[Python 2](https://www.python.org/download/releases/2.0/)**: Due to the requirements for the `wireless-regdb` package from the repository above 
+- **[Mininet-WiFi](https://github.com/intrig-unicamp/mininet-wifi)**: Emulation platform  
+- **[P4](https://opennetworking.org/p4/)**: For P4-enabled APs. P4 dependencies can be installed by using the `-P` flag as suggested by https://github.com/intrig-unicamp/mininet-wifi#installation
+- **[sumo and sumo-tools (tested with 1.6)](https://www.eclipse.org/sumo/)**: For vehicular simulation
+- **[python-scapy](https://scapy.net/)**: Packet sniffer
+- **[mosquitto, mosquitto-client and paho-mqtt](https://mosquitto.org/)**: MQTT communication
+- **[python-pandas](https://pandas.pydata.org/)**: For graph generation 
+- **[bridge-utils](https://wiki.debian.org/BridgeNetworkConnections)**: Responsible for creating the virtual interface used by the socket communication
+    
 
 #### copy mininet-wifi dir to /root
 `cp -r mininet-wifi /root`  
 
+This is necessary because `xterm` will be opened with root user
 
 ## Running the code   
 
