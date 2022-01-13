@@ -1,7 +1,9 @@
 # RSSI Scenario
 
+Please find below the reproducibility steps:
+
 ## Requirements 
-- **Kernel version**: + v5.8-rc1 (IEEE 802.11p support)
+- **Kernel version**: [+v5.8](https://github.com/torvalds/linux/tree/v5.8)
 - **[wireless-regdb and CRDA](https://mininet-wifi.github.io/80211p/)**: In general, if you can establish communication between sta1 and sta2 by running https://github.com/intrig-unicamp/mininet-wifi/blob/master/examples/ieee80211p.py this means that IEEE 802.11p is working.
 - **[Python 2](https://www.python.org/download/releases/2.0/)**: Due to the requirements for the `wireless-regdb` package from the repository above 
 - **[Mininet-WiFi](https://github.com/intrig-unicamp/mininet-wifi)**: Emulation platform  
@@ -13,7 +15,7 @@
 - **[bridge-utils](https://wiki.debian.org/BridgeNetworkConnections)**: Responsible for creating the virtual interface used by the socket communication
   
 
-#### copy mininet-wifi dir to /root
+#### Copy mininet-wifi dir to /root
 `cp -r mininet-wifi /root`  
 
 This is necessary because `xterm` will be opened with root user
